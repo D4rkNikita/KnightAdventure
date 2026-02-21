@@ -1,3 +1,9 @@
+# =========================
+
+# Unity generated folders
+
+# =========================
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -5,26 +11,102 @@
 [Bb]uilds/
 [Ll]ogs/
 UserSettings/
-
 MemoryCaptures/
-Recordings/
 
-Visual Studio / VSCode
+# Auto generated VS / Rider files
 
 .vs/
-.vscode/
-*.csproj
-*.unityproj
-*.sln
-*.user
-*.userprefs
+.idea/
+.gradle/
+ExportedObj/
+.consulo/
+
+# =========================
+
+# Crash / cache
+
+# =========================
+
+sysinfo.txt
 *.pidb
 *.booproj
 *.svd
 *.pdb
 *.mdb
+*.opendb
+*.VC.db
 
-OS
+# =========================
+
+# Unity cache
+
+# =========================
+
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# =========================
+
+# Builds
+
+# =========================
+
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
+*.ipa
+
+# =========================
+
+# OS junk
+
+# =========================
 
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# =========================
+
+# Addressables
+
+# =========================
+
+ServerData/
+
+# =========================
+
+# Rider / VS Code
+
+# =========================
+
+*.DotSettings.user
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# =========================
+
+# Important: KEEP THESE
+
+# (Do NOT ignore)
+
+# =========================
+
+# Assets/
+
+# Packages/
+
+# ProjectSettings/
