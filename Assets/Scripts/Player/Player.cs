@@ -21,6 +21,16 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        GameInput.Instance.OnPlayerAttack += GameInput_OnPlayerAttack;
+    }
+
+    private void GameInput_OnPlayerAttack(object sender, System.EventArgs e)
+    {
+       ActiveWeapon.Instance.GetActiveWeapon().Attack();
+    }
+
     private void HadleMovement()
     {
         Vector2 inputVector = GameInput.Instance.GetMovementVector();
