@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6951aceed0d71564285155635e9421ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  startingState: 1
+  startingState: 0
   roamingDistanceMax: 7
   roamingDistanceMin: 3
   roamingTimerMax: 2
