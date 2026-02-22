@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[SelectionBase]
+
 public class Player : MonoBehaviour
 {
     public static Player Instance { get; private set; }
