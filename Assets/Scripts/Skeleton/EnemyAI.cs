@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     private float _nextAttackTime = 0f;
 
     private NavMeshAgent _navMeshAgent;
-    private State _currentState;
+    public State _currentState;
     private float _roamingTimer;
     private Vector3 _roamPosition;
     private Vector3 _startingPosition;
@@ -52,7 +52,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private enum State
+    public enum State
     {
         Roaming,
         Idle,
