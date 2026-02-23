@@ -211,7 +211,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.6
-  m_Speed: 1.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -235,10 +235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6951aceed0d71564285155635e9421ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  startingState: 0
-  roamingDistanceMax: 7
-  roamingDistanceMin: 3
-  roamingTimerMax: 2
+  _startingState: 0
+  _roamingDistanceMax: 7
+  _roamingDistanceMin: 3
+  _roamingTimerMax: 2
+  _isChasingEnemy: 0
+  _isAttackingEnemy: 0
 --- !u!114 &5408657288463834702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +265,7 @@ GameObject:
   - component: {fileID: 3371823752787973996}
   - component: {fileID: 1095087652538667855}
   - component: {fileID: 5845700555870408632}
+  - component: {fileID: 7624258579535208829}
   m_Layer: 0
   m_Name: SkeletonVisual
   m_TagString: Untagged
@@ -335,7 +338,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -798558157, guid: 23f2e65c14c05794981d810153b5ac17, type: 3}
+  m_Sprite: {fileID: 1290532464073988732, guid: 5b6006fb5143ab941b6f60a5cb4bf281, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -367,3 +370,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7624258579535208829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8036909605095535536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5759ce3b4c492945970a215c8268b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkeletonVisual
