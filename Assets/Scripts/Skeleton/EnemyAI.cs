@@ -113,6 +113,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    public void SetDeathState()
+    {
+        _navMeshAgent.ResetPath();
+        _currentState = State.Death;
+    }
+
     public float GetRoamingAnimationSpeed()
     {
         return _navMeshAgent.speed / _roamingSpeed;
@@ -216,4 +222,5 @@ public class EnemyAI : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
+
 }
