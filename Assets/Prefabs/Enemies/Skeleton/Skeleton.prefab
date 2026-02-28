@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e19506a1fb7c7428e35e4dd7d93694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEntity
-  _maxHealth: 20
+  _enemySO: {fileID: 11400000, guid: 1a6f0fee2c44a554f8b8009187482837, type: 2}
 --- !u!1 &8036909605095535536
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1290532464073988732, guid: 5b6006fb5143ab941b6f60a5cb4bf281, type: 3}
+  m_Sprite: {fileID: -798558157, guid: 23f2e65c14c05794981d810153b5ac17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -448,3 +448,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonVisual
   _enemyAI: {fileID: 8756639992373298764}
   _enemyEntity: {fileID: 5408657288463834702}
+  _enemyShadow: {fileID: 664376435467971877}
