@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 318519477}
   - component: {fileID: 318519476}
   - component: {fileID: 318519475}
+  - component: {fileID: 318519478}
   m_Layer: 0
   m_Name: NavMeshSurface
   m_TagString: Untagged
@@ -304,6 +305,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &318519478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318519474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736647297b4318a468b6534ae815ec2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NavMeshSurfaceManagment
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,6 +878,7 @@ GameObject:
   - component: {fileID: 1142696432}
   - component: {fileID: 1142696431}
   - component: {fileID: 1142696433}
+  - component: {fileID: 1142696434}
   m_Layer: 0
   m_Name: PlayerVisual
   m_TagString: Untagged
@@ -981,6 +995,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377b9294e7c263047a07fc2ba67e87a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerVisual
+--- !u!114 &1142696434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142696429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b279cd4d21fb34aaead6b34a083ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashBlink
+  _damagableObject: {fileID: 2064542888}
+  _blinkMaterial: {fileID: 2100000, guid: 25c2f8107ab36574d925b173e9c85da9, type: 2}
+  _blinkDuration: 0.2
 --- !u!4 &1202878137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4374264748719247020, guid: 7f4e395143c8d37438a3c8d59bd8f4ba, type: 3}
@@ -1211,6 +1240,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ae6819dbe4d0464a80264bf07c9aa2a, type: 3}
+--- !u!1001 &1770759096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3747832120486037609, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_Name
+      value: BushDeathVFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7327
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.758
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399828762413080938, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
 --- !u!1 &2064542887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1310,7 @@ GameObject:
   - component: {fileID: 2064542892}
   - component: {fileID: 2064542893}
   - component: {fileID: 2064542888}
+  - component: {fileID: 2064542894}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1243,7 +1330,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e688fa7312235524695abbc98ea1da3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  movingSpeed: 6
+  _movingSpeed: 5
+  _maxHealth: 10
+  _damageReacoveryTime: 0.5
 --- !u!4 &2064542890
 Transform:
   m_ObjectHideFlags: 0
@@ -1359,7 +1448,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.053206936, y: 1.0273027}
+  m_Offset: {x: -0.0466609, y: 0.9094068}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1369,8 +1458,22 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.79535794, y: 1.7776394}
+  m_Size: {x: 0.7037165, y: 1.3588481}
   m_EdgeRadius: 0
+--- !u!114 &2064542894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064542887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2619ccf3a9e36244cba536e9c46e6a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KnockBack
+  _knockBackForce: 3
+  _knockBackMovingTimerMax: 0.3
 --- !u!1001 &920875869890245437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1611,3 +1714,4 @@ SceneRoots:
   - {fileID: 8471072592880400675}
   - {fileID: 2064542890}
   - {fileID: 318519477}
+  - {fileID: 1770759096}

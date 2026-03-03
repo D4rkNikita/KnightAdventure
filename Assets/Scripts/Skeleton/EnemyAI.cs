@@ -129,7 +129,7 @@ public class EnemyAI : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, Player.Instance.transform.position);
         State newState = State.Roaming;
 
-        if (_isChasingEnemy)
+        if (_isChasingEnemy && Player.Instance.IsAlive())
         {
             if (distanceToPlayer <= _chasingDistance)
             {
@@ -141,7 +141,10 @@ public class EnemyAI : MonoBehaviour
         {
             if (distanceToPlayer <= _attackingDistance)
             {
-                newState = State.Attacking;
+                if (Player.Instance.IsAlive())
+                    newState = State.Attacking;
+                else
+                    newState = State.Roaming;
             }
         }
 
@@ -184,7 +187,8 @@ public class EnemyAI : MonoBehaviour
             if (IsRunning)
             {
                 ChangeFacingDirection(_lastPosition, transform.position);
-            } else if (_currentState == State.Attacking)
+            }
+            else if (_currentState == State.Attacking)
             {
                 ChangeFacingDirection(transform.position, Player.Instance.transform.position);
             }

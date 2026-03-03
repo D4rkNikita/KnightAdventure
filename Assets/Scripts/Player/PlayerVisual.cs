@@ -3,24 +3,38 @@ using UnityEngine;
 public class PlayerVisual : MonoBehaviour
 {
     private const string IS_RUNNING = "IsRunning";
+    private const string IS_DIE = "IsDie";
 
-    private Animator animator;
-
-    private SpriteRenderer spriteRenderer;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
+    private FlashBlink _flashBlink;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _flashBlink = GetComponent<FlashBlink>();
+    }
+
+    private void Start()
+    {
+        Player.Instance.OnPlayerDeath += Player_OnPlayerDeath;
     }
 
     private void Update()
     {
-        if (animator != null)
+        if (_animator != null)
         {
-            animator.SetBool(IS_RUNNING, Player.Instance.IsRunning());
+            _animator.SetBool(IS_RUNNING, Player.Instance.IsRunning());
         }
-        AdjustPlayerFacingDirection();
+
+        if(Player.Instance.IsAlive())
+            AdjustPlayerFacingDirection();
+    }
+
+    private void OnDestroy()
+    {
+         Player.Instance.OnPlayerDeath -= Player_OnPlayerDeath;
     }
 
     private void AdjustPlayerFacingDirection()
@@ -30,11 +44,17 @@ public class PlayerVisual : MonoBehaviour
 
         if (mousePos.x < playerPos.x)
         {
-            spriteRenderer.flipX = true;
+            _spriteRenderer.flipX = true;
         }
         else
         {
-            spriteRenderer.flipX = false;
+            _spriteRenderer.flipX = false;
         }
+    }
+
+    private void Player_OnPlayerDeath(object sender, System.EventArgs e)
+    {
+        _animator.SetBool(IS_DIE, true);
+        _flashBlink.StopBlinking();
     }
 }
