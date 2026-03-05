@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab64fd41d0ea9e46a1c51eeaa805e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestructablePlantVisual
-  _destructablePlant: {fileID: 527438283691276554}
-  _bushDeathVPXPrefab: {fileID: 3747832120486037609, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
+  destructiblePlant: {fileID: 527438283691276554}
+  bushDeathVFXPrefab: {fileID: 3747832120486037609, guid: b31a8a657e902ef4999e20937d77d6ae, type: 3}
 --- !u!1 &5757637818937103355
 GameObject:
   m_ObjectHideFlags: 0

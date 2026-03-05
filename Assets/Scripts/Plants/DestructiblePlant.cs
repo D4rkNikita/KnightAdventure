@@ -14,7 +14,7 @@ public class DestructablePlant : MonoBehaviour
 
             Destroy(gameObject);
             
-            NavMeshSurfaceManagment.Instance.RebakeNavmeshSurface();
+            NavMeshSurfaceManagement.Instance.RebakeNavmeshSurface();
         }
     }
 }

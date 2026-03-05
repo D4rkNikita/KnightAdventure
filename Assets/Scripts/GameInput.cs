@@ -1,15 +1,15 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
-    public static GameInput Instance { get; private set;}
+    public static GameInput Instance { get; private set; }
 
     private PlayerInputActions _playerInputActions;
 
     public event EventHandler OnPlayerAttack;
+    public event EventHandler OnPlayerDash;
 
     private void Awake()
     {
@@ -18,16 +18,14 @@ public class GameInput : MonoBehaviour
         _playerInputActions = new PlayerInputActions();
         _playerInputActions.Enable();
 
-    }
-
-    private void Start()
-    {
-        _playerInputActions.Combat.Attack.started +=  PlayerAttack_started;
+        _playerInputActions.Combat.Attack.started += PlayerAttack_started;
+        _playerInputActions.Player.Dash.started += PlayerDash_performed;
     }
 
     private void OnDestroy()
     {
-        _playerInputActions.Combat.Attack.started -=  PlayerAttack_started;
+        _playerInputActions.Combat.Attack.started -= PlayerAttack_started;
+        _playerInputActions.Player.Dash.started -= PlayerDash_performed;
     }
 
     private void PlayerAttack_started(InputAction.CallbackContext obj)
@@ -42,7 +40,7 @@ public class GameInput : MonoBehaviour
         return inputVector;
     }
 
-    public Vector3 GetMousePosition()
+    public Vector2 GetMousePosition()
     {
         return Mouse.current.position.ReadValue();
     }
@@ -50,5 +48,10 @@ public class GameInput : MonoBehaviour
     public void DisableMovement()
     {
         _playerInputActions.Disable();
+    }
+
+    private void PlayerDash_performed(InputAction.CallbackContext obj)
+    {
+        OnPlayerDash?.Invoke(this, EventArgs.Empty);
     }
 }

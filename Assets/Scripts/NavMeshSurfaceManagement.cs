@@ -1,9 +1,9 @@
 using NavMeshPlus.Components;
 using UnityEngine;
 
-public class NavMeshSurfaceManagment : MonoBehaviour
+public class NavMeshSurfaceManagement : MonoBehaviour
 {
-    public static NavMeshSurfaceManagment Instance { get; private set; }
+    public static NavMeshSurfaceManagement Instance { get; private set; }
 
     private NavMeshSurface _navMeshSurface;
 

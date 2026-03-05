@@ -1,5 +1,4 @@
 using System;
-using System.Xml.Serialization;
 using UnityEngine;
 
 [RequireComponent(typeof(PolygonCollider2D))]
@@ -9,7 +8,7 @@ using UnityEngine;
 
 public class EnemyEntity : MonoBehaviour
 {
-    [SerializeField] private EnemySO _enemySO;
+    [SerializeField] private EnemySO enemySO;
 
     public event EventHandler OnTakeHit;
     public event EventHandler OnDeath;
@@ -29,14 +28,14 @@ public class EnemyEntity : MonoBehaviour
 
     private void Start()
     {
-        _currentHealth = _enemySO.enemyHealth;
+        _currentHealth = enemySO.enemyHealth;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.transform.TryGetComponent(out Player player))
         {
-            player.TakeDamage(transform, _enemySO.enemyDamageAmount);
+            player.TakeDamage(transform, enemySO.enemyDamageAmount);
         }   
     }
 
@@ -47,12 +46,12 @@ public class EnemyEntity : MonoBehaviour
         DetectDeath();
     }
 
-    public void PolygonColliderTrunOn()
+    public void PolygonColliderTurnOn()
     {
         _polygonCollider2D.enabled = true;
     }
 
-    public void PolygonColliderTrunOff()
+    public void PolygonColliderTurnOff()
     {
         _polygonCollider2D.enabled = false;
     }

@@ -295,16 +295,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6951aceed0d71564285155635e9421ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  _startingState: 0
-  _roamingDistanceMax: 7
-  _roamingDistanceMin: 3
-  _roamingTimerMax: 2
-  _isChasingEnemy: 1
-  _chasingDistance: 4
-  _isAttackingEnemy: 1
-  _attackingDistance: 2
-  _attackRate: 1
-  _currentState: 0
+  startingState: 0
+  roamingDistanceMax: 7
+  roamingDistanceMin: 3
+  roamingTimerMax: 2
+  isChasingEnemy: 1
+  chasingDistance: 4
+  chasingSpeedMultiplier: 2
+  isAttackingEnemy: 1
+  attackingDistance: 2
+  attackRate: 2
+  currentState: 0
 --- !u!114 &5408657288463834702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09e19506a1fb7c7428e35e4dd7d93694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEntity
-  _enemySO: {fileID: 11400000, guid: 1a6f0fee2c44a554f8b8009187482837, type: 2}
+  enemySO: {fileID: 11400000, guid: 1a6f0fee2c44a554f8b8009187482837, type: 2}
 --- !u!1 &8036909605095535536
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5759ce3b4c492945970a215c8268b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonVisual
-  _enemyAI: {fileID: 8756639992373298764}
-  _enemyEntity: {fileID: 5408657288463834702}
-  _enemyShadow: {fileID: 664376435467971877}
+  enemyAI: {fileID: 8756639992373298764}
+  enemyEntity: {fileID: 5408657288463834702}
+  enemyShadow: {fileID: 664376435467971877}
